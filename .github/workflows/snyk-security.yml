@@ -35,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
-        run: snyk test --all projects --sarif-file-output=snyk.sarif
+        run: snyk code test --all projects --sarif-file-output=snyk.sarif
         # uses: snyk/actions/node@master
         continue-on-error: true # To make sure that SARIF upload gets called
         env:
